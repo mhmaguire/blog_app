@@ -1,0 +1,1 @@
+Simple blog application to learn rails / show off my skillz

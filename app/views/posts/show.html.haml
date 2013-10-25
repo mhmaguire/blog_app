@@ -1,0 +1,12 @@
+=render partial: 'post', object: @post
+.row
+	.comments.ten.columns.alpha
+		-if @post.comments_enabled?
+			=render partial: 'comments/form', locals: {post: @post}
+		-else 
+			%h4 Comments have been disabled for this post
+		%ul.comments
+			=render partial: 'comments/comment', collection: @post.comments.decorate
+	.six.columns.omega
+		%h5 tags
+		=render_cell :tag_cloud, :display, tags: @post.tags

@@ -1,0 +1,9 @@
+%li
+	.entry
+		%h3= entry.title
+		%h5= entry.created_at
+		%p
+			tags:
+			= entry.tag_list.to_s
+		%p= entry.body.truncate(160)
+		=link_to "Read More...", post_path(entry)

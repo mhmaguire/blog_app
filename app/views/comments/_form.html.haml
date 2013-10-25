@@ -1,0 +1,7 @@
+%h5 comment form
+=semantic_form_for [post, Comment.new], remote: true do |f|
+	=f.inputs do 
+		=f.input :author, input_html: {hint: "Anonymous"}
+		=f.input :body, input_html: {rows: 5}
+	=f.actions do 
+		=f.action :submit, label: "Leave a comment"

@@ -1,0 +1,18 @@
+!!!
+%html
+	%head
+		%title BlogApp
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		.container
+			.header.row
+				%h2= @blog.title
+				%h4= @blog.subtitle
+				.flash
+					-flash.each do |k,v|
+						%p{class: "#{k.to_s}"}= v
+			.main.row
+				= yield
+			.footer.row

@@ -1,0 +1,8 @@
+=semantic_form_for @post do |f|
+	=f.inputs do 
+		=f.input :title
+		=f.input :body
+		=f.input :tag_list, as: :string, label: "Tags format 'tag1, tag2, tag3, ...'"
+		=f.input :comments_enabled, label: "Enable Comments"
+	=f.actions do
+		=f.action :submit, label: "Post!"

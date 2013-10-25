@@ -1,0 +1,7 @@
+.entries.twelve.columns
+	%ul
+		=render partial: 'entry', collection: @entries
+	=paginate @entries
+.four.columns
+	%h5 tags
+	=render_cell :tag_cloud, :display, tags: @blog.tags
