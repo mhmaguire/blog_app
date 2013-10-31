@@ -9,7 +9,7 @@ class RenderVideoLinks < Redcarpet::Render::HTML
 		when 'email'
 			%(<a href='mailto:#{link}'> #{link}</a>)
 		else
-			'no match'
+			'no match' 
 		end
 	end
 
