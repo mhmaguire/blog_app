@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def markdown(body, extensions = {})
-  	renderer = Redcarpet::Render::HTML.new
+  	renderer = RenderVideoLinks.new
   	md = Redcarpet::Markdown.new(renderer, extensions)
   	md.render(body).html_safe
   end
