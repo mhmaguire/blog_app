@@ -13,7 +13,7 @@ class RenderVideoLinks < Redcarpet::Render::HTML
 		end
 	end
 
-
+	private
 	def get_link(link)
 		host = URI(link).host
 		html = nil
